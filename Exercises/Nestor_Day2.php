@@ -17,6 +17,7 @@
     } catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
+//=======================Pre-DSN connection/database/table setup=====================//
     // $sql = "CREATE DATABASE zipDiagnostics";
     // $pdo->exec($sql);
     // try {
@@ -45,6 +46,13 @@
     //       echo "Connection failed: " . $e->getMessage();
     //     }
     // $conn = null;
+
+//==================Physician notes where initially set to integers.  Any text submitted=//
+//==================would set 0.  I changed notes to varchar on phpadmin and used the====// 
+//==================following code to update that specific note at ID 16=================//
+    $notes = "adding this to physician notes";
+    $uper = "UPDATE samplesubmissionform SET notes = ? WHERE id = ?";
+    $pdo->prepare($uper)->execute([$notes, 16])
 ?>
 <!---------------Submitting info to database table---------------->
 <?php 
@@ -56,10 +64,11 @@
     $dob = $_POST['Dob'];
     $sampleid = $_POST['Sample-ID'];
     $doc = $_POST['Doc'];
-    $sql = "INSERT INTO samplesubmissionform (firstname, lastname, middlename, suffix, dateofbirth, sampleid, doc)
-        VALUES (?, ?)";
+    $notes = $_POST['Notes'];
+    $sql = "INSERT INTO samplesubmissionform (firstname, lastname, middlename, suffix, dateofbirth, sampleid, dateofcollection, notes)
+        VALUES (?, ?, ? , ?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$firstname, $lastname, $middlename, $suffix, $dob, $sampleid, $doc]);
+    $stmt->execute([$firstname, $lastname, $middlename, $suffix, $dob, $sampleid, $doc, $notes]);
     header('Location: submitted.php');
 }
 ?>
@@ -110,7 +119,7 @@
 
                         <div class="md-form">
                             <label for="suffix">Suffix</label>
-                            <input type="email" name="Suffix" class="form-control">
+                            <input type="text" name="Suffix" class="form-control">
                         </div>
 
                         <br>
