@@ -59,7 +59,7 @@
                     
                         <div class="md-form">
                             <label for="dob">Date of Birth</label>
-                            <input type="text" name="Dob" class="form-control">
+                            <input type="date" name="Dob" class="form-control">
                         </div>
                         
                         <br><br>
@@ -76,27 +76,27 @@
                         <div> <p>Sample Type</p>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="feces"> Feces
+                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox1" value="feces"> Feces
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="urine"> Urine
+                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox2" value="urine"> Urine
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="blood"> Blood
+                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox3" value="blood"> Blood
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Sputum"> Sputum
+                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox4" value="Sputum"> Sputum
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="CSF"> CSF
+                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox5" value="CSF"> CSF
                             </label>
                         </div>
 
@@ -104,7 +104,7 @@
                     
                         <div class="md-form">
                             <label for="doc">Date of Collection</label>
-                            <input type="text" name="Doc" class="form-control">
+                            <input type="date" name="Doc" class="form-control">
                         </div>
 
                         <br><br>
@@ -114,27 +114,27 @@
                         <div> <p>Test Requested</p>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Phen_ID">Phenotypic Identification
+                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox1" value="Phen_ID">Phenotypic Identification
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="WGS"> WGS
+                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox2" value="WGS"> WGS
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="qPCR"> qPCR
+                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox3" value="qPCR"> qPCR
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Maldi"> MALDI-TOF
+                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox4" value="Maldi"> MALDI-TOF
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="Biofire"> Biofire
+                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox35" value="Biofire"> Biofire
                             </label>
                         </div>
 

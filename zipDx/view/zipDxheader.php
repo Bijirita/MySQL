@@ -23,7 +23,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="zipDxsearch.php">Search</a>
-                        </li>    
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="zipDxtable.php">Table</a>
+                        </li>     
                     </ul>
                 </div>  
             </nav>

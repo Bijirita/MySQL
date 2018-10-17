@@ -19,6 +19,14 @@
             VALUES (?, ?, ? , ?, ?, ?, ?, ?)";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([$firstname, $lastname, $middlename, $suffix, $dob, $sampleid, $doc, $notes]);
-        header('Location: submitted.php');
+        header('Location: zipDxsubmitted.php');
     }
+?>
+
+<?php 
+// $stmt = $dbh->prepare('
+//   INSERT INTO samplesubmissionform(checkbox) VALUES(sampletype);
+// ');
+// $stmt->bindValue('checkbox', $sampletype);
+// foreach($_POST["checkbox"] as $sampletype) $stmt->execute();
 ?>
