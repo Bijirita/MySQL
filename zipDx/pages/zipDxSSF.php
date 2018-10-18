@@ -6,6 +6,7 @@
 
 <?php include("../actions/zipDxcreatefunction.php");?>
 
+
 <!--==================Submitting info to database table===========================-->
 
 <?php 
@@ -153,5 +154,3 @@
             </div>
         </div>
         <?php include("../view/zipDxfooter.php");?>
-    </body>
-</html>

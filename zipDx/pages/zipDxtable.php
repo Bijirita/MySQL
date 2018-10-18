@@ -13,20 +13,26 @@
 
     $data = $pdo->query('SELECT * FROM samplesubmissionform');
     $stmt = $data->fetchAll(PDO::FETCH_ASSOC);
+    $rowLength = $data->columnCount();
 
     echo "<table class='db-table'>";
 
-    for ($i = 0; $i < $data->columnCount(); $i++) {
+    for ($i = 0; $i < $rowLength; $i++) {
         $newCol = $data->getColumnMeta($i);
+       
         $columns = $newCol['name'];
         echo "<th>" . $columns . "</th>";
     }
 
     foreach($stmt as $row) {
         echo "<tr>";
-        foreach ($row as $col) {
-            echo "<td>" . $col . "</td>";
+        $keys = array_keys($row);
+        for ($i = 0; $i < $rowLength; $i++) {
+            echo "<td>" . $row[$keys[$i]] . "</td>";
         }
+        $id = $row[$keys[0]];
+        echo '<td> <a href="../actions/zipDxdelete.php' . "?id=$id\"" . 'class="del_btn">' .  'Delete' . '</a></td>';
+        echo '<td> <a href="zipDxedit.php' . "?id=$id\"" . 'class="del_btn">' .  'Edit' . '</a></td>';
     }
 
     echo "</table>";
