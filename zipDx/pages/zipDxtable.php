@@ -31,34 +31,11 @@
             echo "<td>" . $row[$keys[$i]] . "</td>";
         }
         $id = $row[$keys[0]];
-        echo '<td> <a href="../actions/zipDxdelete.php' . "?id=$id\"" . 'class="del_btn">' .  'Delete' . '</a></td>';
-        echo '<td> <a href="zipDxedit.php' . "?id=$id\"" . 'class="del_btn">' .  'Edit' . '</a></td>';
+        echo '<td> <a href="../actions/zipDxdelete.php' . "?submission_id=$id\"" . 'class="del_btn">' .  'Delete' . '</a></td>';
+        echo '<td> <a href="zipDxedit.php' . "?submission_id=$id\"" . 'class="del_btn">' .  'Edit' . '</a></td>';
     }
 
     echo "</table>";
-
-    /* show tables */
-    // $result = pdo_query('SHOW TABLES',$pdo) or die('cannot show tables');
-    // while($tableName = pdo_fetch_row($result)) {
-
-    // 	$table = $tableName[0];
-        
-    // 	echo '<h3>',$table,'</h3>';
-    // 	$result2 = pdo_query('SHOW COLUMNS FROM '.$table) or die('cannot show columns from '.$table);
-    // 	if(pdo_num_rows($result2)) {
-    // 		echo '<table cellpadding="0" cellspacing="0" class="db-table">';
-    // 		echo '<tr><th>Field</th><th>Type</th><th>Null</th><th>Key</th><th>Default<th>Extra</th></tr>';
-    // 		while($row2 = pdo_fetch_row($result2)) {
-    // 			echo '<tr>';
-    // 			foreach($row2 as $key=>$value) {
-    // 				echo '<td>',$value,'</td>';
-    // 			}
-    // 			echo '</tr>';
-    // 		}
-    // 		echo '</table><br />';
-    // 	}
-    // }
-
 ?>
 
 <?php include("../view/zipDxfooter.php"); ?>

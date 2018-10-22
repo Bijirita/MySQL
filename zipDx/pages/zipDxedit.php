@@ -4,7 +4,7 @@
 
 <?php
 $id = $_GET['id'];
-$sql = 'SELECT * FROM samplesubmissionform WHERE ID = :id';
+$sql = 'SELECT * FROM samplesubmissionform WHERE submission_id = :id';
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id' => $id]);
 $sample = $stmt->fetch(PDO::FETCH_OBJ);
@@ -23,7 +23,7 @@ if (isset($_POST['submit']))
     $id = $_POST['id'];
     $sql = 'UPDATE samplesubmissionform SET firstname = :firstname, lastname = :lastname,
     middlename = :middlename, suffix = :suffix, dateofbirth = :dob, sampleid = :sampleid,
-    dateofcollection = :doc, notes = :notes WHERE ID = :id'; 
+    dateofcollection = :doc, notes = :notes WHERE submission_id = :id'; 
 $stmt = $pdo->prepare($sql);
     //if (isset($_POST['submit'])) {
     $stmt->execute([

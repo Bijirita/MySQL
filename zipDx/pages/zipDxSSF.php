@@ -13,6 +13,7 @@
     if (isset($_POST['submit'])) {
         global $pdo;
         createsample ();
+        
     }
 ?>
         <?php include("../view/zipDxhead.php");?>
@@ -77,27 +78,27 @@
                         <div> <p>Sample Type</p>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox1" value="feces"> Feces
+                                <input class="form-check-input" name="sampletype[1]" type="checkbox" id="inlineCheckbox1" value="1"> Feces
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox2" value="urine"> Urine
+                                <input class="form-check-input" name="sampletype[2]" type="checkbox" id="inlineCheckbox2" value="2"> Urine
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox3" value="blood"> Blood
+                                <input class="form-check-input" name="sampletype[3]" type="checkbox" id="inlineCheckbox3" value="3"> Blood
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox4" value="Sputum"> Sputum
+                                <input class="form-check-input" name="sampletype[4]" type="checkbox" id="inlineCheckbox4" value="4"> Sputum
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox5" value="CSF"> CSF
+                                <input class="form-check-input" name="sampletype[5]" type="checkbox" id="inlineCheckbox5" value="5"> CSF
                             </label>
                         </div>
 
@@ -115,27 +116,27 @@
                         <div> <p>Test Requested</p>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox1" value="Phen_ID">Phenotypic Identification
+                                <input class="form-check-input" name="testreq[1]" type="checkbox" id="inlineCheckbox1" value="1">Phenotypic Identification
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox2" value="WGS"> WGS
+                                <input class="form-check-input" name="testreq[2]" type="checkbox" id="inlineCheckbox2" value="2"> WGS
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox3" value="qPCR"> qPCR
+                                <input class="form-check-input" name="testreq[3]" type="checkbox" id="inlineCheckbox3" value="3"> qPCR
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox4" value="Maldi"> MALDI-TOF
+                                <input class="form-check-input" name="testreq[4]" type="checkbox" id="inlineCheckbox4" value="4"> MALDI-TOF
                             </label>
                         </div>
                         <div class="form-check form-check-inline disabled">
                             <label class="form-check-label">
-                                <input class="form-check-input" name="testreq" type="checkbox" id="inlineCheckbox35" value="Biofire"> Biofire
+                                <input class="form-check-input" name="testreq[5]" type="checkbox" id="inlineCheckbox35" value="5"> Biofire
                             </label>
                         </div>
 
