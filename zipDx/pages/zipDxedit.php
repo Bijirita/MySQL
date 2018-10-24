@@ -3,7 +3,7 @@
 <?php include("../actions/zipDdbconnection.php"); ?>
 
 <?php
-$id = $_GET['id'];
+$id = $_GET['submission_id'];
 $sql = 'SELECT * FROM samplesubmissionform WHERE submission_id = :id';
 $stmt = $pdo->prepare($sql);
 $stmt->execute(['id' => $id]);
@@ -87,7 +87,6 @@ $stmt = $pdo->prepare($sql);
                    <div class="md-form">
                        <label for="dob">Date of Birth</label>
                        <input value = "<?php echo $sample->dateofcollection?>" type="date" name="Dob" class="form-control">
-                       <?php var_dump ($sample->notes); ?>
                    </div>
                    
                    <br><br>
@@ -170,7 +169,12 @@ $stmt = $pdo->prepare($sql);
 
                    <div class="md-form">
                        <label for="formMessage">Physician Notes</label>
-                       <textarea  name="Notes" id="formMessage" class="form-control md-textarea" rows="3"><?php echo $sample->notes?></textarea>
+                       <textarea  name="Notes" id="formMessage" class="form-control md-textarea" rows="3">
+                       <?php if ('notes' === false) {
+                           echo " ";
+                        }else {
+                           echo $sample->notes;
+                        }?></textarea>
                    </div>
 
                    <br>

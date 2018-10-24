@@ -40,7 +40,7 @@ function createsample () {
        
         VALUES (:id, :typeid)";
 
-    $testreq = "INSERT INTO testreq (submission_id, sampletest_ID)
+    $testreq = "INSERT INTO submissionhastest (submission_id, submissiontest_ID)
        
         VALUES (:subid, :testid)";    
         
@@ -62,7 +62,7 @@ function createsample () {
         foreach($_POST['testreq'] as $checked) {
             $reqresults = $checked;
             echo $reqresults;
-            echo "<br>";;
+            echo "<br>";
             $testreqprep->execute([$last_id, $reqresults]);
         }
         $pdo->commit();
