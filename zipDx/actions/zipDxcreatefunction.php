@@ -71,10 +71,4 @@ function createsample () {
 
 <?php 
 
-//Join the following mfker//
-    // $stmt = $dbh->prepare('
-    // INSERT INTO samplesubmissionform(checkbox) VALUES(sampletype);
-    // ');
-    // $stmt->bindValue('checkbox', $sampletype);
-    // foreach($_POST["checkbox"] as $sampletype) $stmt->execute();
 ?>

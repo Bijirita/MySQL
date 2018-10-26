@@ -1,4 +1,4 @@
-<!--==================Submitting info to database table===========================-->
+<!--==================Connecting with DSN===========================-->
         <?php include("../actions/zipDdbconnection.php"); ?>
         
         <?php include("../view/zipDxheader.php"); ?>

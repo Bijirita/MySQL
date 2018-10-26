@@ -101,32 +101,31 @@ $stmt = $pdo->prepare($sql);
                    <br><br>
 
                    <div> <p>Sample Type</p>
-                   <div class="form-check form-check-inline">
-                       <label class="form-check-label">
-                           <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox1" value="feces"> Feces
-                       </label>
-                   </div>
-                   <div class="form-check form-check-inline">
-                       <label class="form-check-label">
-                           <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox2" value="urine"> Urine
-                       </label>
-                   </div>
-                   <div class="form-check form-check-inline disabled">
-                       <label class="form-check-label">
-                           <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox3" value="blood"> Blood
-                       </label>
-                   </div>
-                   <div class="form-check form-check-inline disabled">
-                       <label class="form-check-label">
-                           <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox4" value="Sputum"> Sputum
-                       </label>
-                   </div>
-                   <div class="form-check form-check-inline disabled">
-                       <label class="form-check-label">
-                           <input class="form-check-input" name="sampletype" type="checkbox" id="inlineCheckbox5" value="CSF"> CSF
-                       </label>
-                   </div>
-
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="sampletype[1]" type="checkbox" id="inlineCheckbox1" value="1"> Feces
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="sampletype[2]" type="checkbox" id="inlineCheckbox2" value="2"> Urine
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline disabled">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="sampletype[3]" type="checkbox" id="inlineCheckbox3" value="3"> Blood
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline disabled">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="sampletype[4]" type="checkbox" id="inlineCheckbox4" value="4"> Sputum
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline disabled">
+                            <label class="form-check-label">
+                                <input class="form-check-input" name="sampletype[5]" type="checkbox" id="inlineCheckbox5" value="5"> CSF
+                            </label>
+                        </div>
                    <br><br><br>
                
                    <div class="md-form">
